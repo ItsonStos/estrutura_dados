@@ -3,19 +3,10 @@ package listaCircular.one.digitalinnovation;
 public class No<T> {
 
     private T conteudo;
-    private No proximoNo;
+    private No<T> noProximo;
 
-    public No(){
-        this.proximoNo = null;
-    }
-
-    public No(T conteudo){
+    public No(T conteudo) {
         this.conteudo = conteudo;
-    }
-
-    public No(T conteudo, No proximoNo) {
-        this.conteudo = conteudo;
-        this.proximoNo = proximoNo;
     }
 
     public T getConteudo() {
@@ -26,27 +17,18 @@ public class No<T> {
         this.conteudo = conteudo;
     }
 
-    public No getProximoNo() {
-        return proximoNo;
+    public No<T> getNoProximo() {
+        return noProximo;
     }
 
-    public void setProximoNo(No proximoNo) {
-        this.proximoNo = proximoNo;
+    public void setNoProximo(No<T> noProximo) {
+        this.noProximo = noProximo;
     }
 
     @Override
     public String toString() {
-        return "No{" + conteudo + '}';
-    }
-
-    public String toStringEncadeado() {
-        String str = "No{" + conteudo + "}";
-
-        if(proximoNo != null){
-            str += "->" + proximoNo.toString();
-        }else{
-            str += "->null";
-        }
-        return str;
+        return "No{" +
+                "conteudo=" + conteudo +
+                '}';
     }
 }

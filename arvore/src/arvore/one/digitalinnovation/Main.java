@@ -1,28 +1,26 @@
-package listaCircular.one.digitalinnovation;
+package arvore.one.digitalinnovation;
+import arvore.one.digitalinnovation.model.Obj;
 
 public class Main {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
-        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
+        ArvoreBinaria<Obj> minhaArvore = new ArvoreBinaria<>();
 
-        minhaListaEncadeada.add("teste1");
-        minhaListaEncadeada.add("teste2");
-        minhaListaEncadeada.add("teste3");
-        minhaListaEncadeada.add("teste4");
+        minhaArvore.inserir(new Obj(13));
+        minhaArvore.inserir(new Obj(10));
+        minhaArvore.inserir(new Obj(25));
+        minhaArvore.inserir(new Obj(2));
+        minhaArvore.inserir(new Obj(12));
+        minhaArvore.inserir(new Obj(20));
+        minhaArvore.inserir(new Obj(31));
+        minhaArvore.inserir(new Obj(29));
+        minhaArvore.inserir(new Obj(32));
+        minhaArvore.remover(new Obj(32));
 
-        System.out.println(minhaListaEncadeada.get(0));
-        System.out.println(minhaListaEncadeada.get(1));
-        System.out.println(minhaListaEncadeada.get(2));
-        System.out.println(minhaListaEncadeada.get(3));
-
-        System.out.println(minhaListaEncadeada);
-
-        minhaListaEncadeada.remove(3);
-
-        System.out.println(minhaListaEncadeada);
-
-
+        minhaArvore.exibirInOrdem();
+        minhaArvore.exibirPreOrdem();
+        minhaArvore.exibirPosOrdem();
 
     }
 

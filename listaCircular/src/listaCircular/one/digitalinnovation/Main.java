@@ -4,25 +4,23 @@ public class Main {
 
     public static void main(String args[]){
 
-        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<>();
+        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
 
-        minhaListaEncadeada.add("teste1");
-        minhaListaEncadeada.add("teste2");
-        minhaListaEncadeada.add("teste3");
-        minhaListaEncadeada.add("teste4");
+        minhaListaCircular.add("c0");
+        System.out.println(minhaListaCircular);
 
-        System.out.println(minhaListaEncadeada.get(0));
-        System.out.println(minhaListaEncadeada.get(1));
-        System.out.println(minhaListaEncadeada.get(2));
-        System.out.println(minhaListaEncadeada.get(3));
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
 
-        System.out.println(minhaListaEncadeada);
+        minhaListaCircular.add("c1");
+        System.out.println(minhaListaCircular);
 
-        minhaListaEncadeada.remove(3);
+        minhaListaCircular.add("c2");
+        minhaListaCircular.add("c3");
+        System.out.println(minhaListaCircular);
 
-        System.out.println(minhaListaEncadeada);
-
-
+        System.out.println(minhaListaCircular.get(7));
+        System.out.println(minhaListaCircular.get(323));
 
     }
 
